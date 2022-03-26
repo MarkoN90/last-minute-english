@@ -1,6 +1,297 @@
+
 nav {
     /*background: red;*/
-    height: 55px;
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+
+.mobile-nav {
+    display: none;
+ }
+
+#mobile-nav {
+    display: none;
+    background-color: #070f34;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+#mobile-nav ul {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#mobile-nav ul li{
+    margin: 20px;
+    list-style-type: none;
+}
+
+
+.main-nav {
+ list-style: none;
+    font-weight: 800;
+ }
+
+.nav-wrapper {
+    display: inline-block;
+    float: right;
+    padding: 17px 11px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin: 20px 20px;
+    color: #0a163c;
+}
+
+#nav-start-btn {
+    font-weight: 800;
+    color: #0a163c;
+    width: 170px;
+}
+
+#main-logo {
+    margin-top: 40px;
+    margin-left: 50px;
+    height: 42px;
+}
+
+#main-title {
+
+    color: #051138;
+    font-size: 85px;
+    font-weight: 800;
+    padding-top: 140px;
+    padding-left: 30px;
+    text-align: left;
+    letter-spacing: -2px;
+
+    /*display: inline;*/
+}
+
+.button-wrapper {
+    margin-top: 88px;
+}
+
+#main-subtitle {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 30px;
+    letter-spacing: -1.5px;
+    color: #8991a9;
+    font-size: 45px;
+}
+
+
+#main-title-ielts {
+    font-size: 90px;
+    font-weight: 800;
+    padding-top: 78px;
+    text-align: left;
+    color: #0cc191;
+    letter-spacing: -4px;
+    display: inline-block;
+}
+
+.main-section-header {
+    font-weight: 700;
+    padding-top: 70px;
+    font-size: 44px;
+}
+
+
+.main-paragraph {
+    text-indent: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 23px;
+}
+
+#boy-illustration {
+    height: 400px;
+}
+
+.section-header {
+    letter-spacing: -1.5px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.benefits-list-item-wrapper {
+    margin:20px;
+    margin-left: 40px;
+
+}
+
+.benefits-list-item {
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -2px;
+}
+
+.green-circle-2 {
+    margin-top: 5px;
+    border-radius: 20px;
+    height: 30px;
+    background: #0cc191;
+    display: inline-block;
+    width: 30px;
+    font-size: 15px;
+}
+
+
+.green-circle {
+    border-radius: 20px;
+    height: 23px;
+    background: #0cc191;
+    display: inline-block;
+    width: 23px;
+    font-size: 11px;
+}
+
+#girl-illustration {
+    height: 500px;
+    margin: 140px;
+    margin-left: -250px;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+
+    .main-nav li {
+        display: inline-block;
+        margin: 20px 10px;
+        color: #0a163c;
+    }
+
+
+}
+
+@media only screen and (max-width: 850px) {
+
+    .main-nav li {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .nav-wrapper {
+        display: inline-block;
+        float: right;
+        padding: 0px 0px;
+        padding-right: 10px;
+    }
+
+    #menu-icon {
+        font-size: 33px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    nav {
+        height: 55px;
+    }
+
+    #main-logo {
+        margin-top: 10px;
+        margin-left: 30px;
+        height: 35px;
+    }
+
+    #main-title {
+        color: #051138;
+        font-size: 44px;
+        font-weight: 800;
+        padding-top: 78px;
+        text-align: center;
+        /*display: inline;*/
+    }
+
+    #main-subtitle {
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: -1.5px;
+        color: #8991a9;
+    }
+
+    #main-title-ielts {
+        font-size: 44px;
+        font-weight: 800;
+        padding-top: 78px;
+        text-align: center;
+        color: #0cc191;
+
+    }
+
+
+
+
+    #girl-illustration {
+        margin-top: 0px;
+        margin: 0px;
+        height: 250px;
+        /*height: 500px;*/
+
+    }
+
+    .main-section-header {
+        font-weight: 700;
+        padding-top: 70px;
+    }
+
+    .main-paragraph {
+        text-indent: 20px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    #boy-illustration {
+        height: 260px;
+    }
+
+    .section-header {
+        letter-spacing: -1.5px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 35px;
+    }
+    .benefits-list-item-wrapper {
+         padding: 15px;
+         margin-right: 20px;
+         padding-top: 10px;
+     }
+
+    .benefits-list-item {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+}
+
+
+/*mobile*/
+* {
+    /*font-family: sans-serif;*/
+}
+
+nav {
+     /*height: 55px;*/
 }
 
 .bg-gray {
@@ -16,48 +307,45 @@ nav {
     color: #a1a7bb;
 }
 
-.section-header {
-    letter-spacing: -1.5px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 35px;
- }
-
-#main-logo {
-    margin-top: 10px;
-    margin-left: 30px;
-    height: 35px;
-}
-
-#main-title {
-    color: #051138;
-    font-size: 44px;
-    font-weight: 800;
-    padding-top: 78px;
-    text-align: center;
-    /*display: inline;*/
-}
-
-#main-subtitle {
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: -1.5px;
-    color: #8991a9;
-}
 
 
-#main-title-ielts {
-    font-size: 44px;
-    font-weight: 800;
-    padding-top: 78px;
-    text-align: center;
-    color: #0cc191;
 
-}
 
-#girl-illustration {
-    margin-top: 70px;
-}
+/*#main-logo {*/
+/*    margin-top: 10px;*/
+/*    margin-left: 30px;*/
+/*    height: 35px;*/
+/*}*/
+
+/*#main-title {*/
+/*    color: #051138;*/
+/*    font-size: 44px;*/
+/*    font-weight: 800;*/
+/*    padding-top: 78px;*/
+/*    text-align: center;*/
+/*    !*display: inline;*!*/
+/*}*/
+
+/*#main-subtitle {*/
+/*    font-weight: bold;*/
+/*    text-align: center;*/
+/*    letter-spacing: -1.5px;*/
+/*    color: #8991a9;*/
+/*}*/
+
+
+/*#main-title-ielts {*/
+/*    font-size: 44px;*/
+/*    font-weight: 800;*/
+/*    padding-top: 78px;*/
+/*    text-align: center;*/
+/*    color: #0cc191;*/
+
+/*}*/
+
+/*#girl-illustration {*/
+/*    margin-top: 70px;*/
+/*}*/
 
 .action-button {
     color: white;
@@ -67,7 +355,7 @@ nav {
     font-weight: 700;
     letter-spacing: 1px;
     margin: 0px 12px;
-    width: 160px;
+    width: 165px;
 }
 
 .action-button-2 {
@@ -79,7 +367,7 @@ nav {
     font-weight: 700;
     letter-spacing: 1px;
     margin: 0px 12px;
-    width: 160px;
+    width: 165px;
 }
 
 .main-section-header {
@@ -94,14 +382,7 @@ nav {
     line-height: 30px;
 }
 
-.green-circle {
-    border-radius: 20px;
-    height: 23px;
-    background: #0cc191;
-    display: inline-block;
-    width: 23px;
-    font-size: 11px;
-}
+
 
 .empty-circle {
     border-radius: 20px;
@@ -113,16 +394,9 @@ nav {
 }
 
 
-.benefits-list-item {
-    font-weight: 500;
-    font-size: 18px;
-}
 
-.benefits-list-item-wrapper {
-    padding: 15px;
-    margin-right: 20px;
-    padding-top: 10px;
-}
+
+
 
 
 .value-card {
@@ -274,7 +548,13 @@ footer {
     border-bottom-left-radius: 5px;
     padding: 5px;
     font-size: 13px;
+    padding-left: 25px;
+    width: 60%;
 
+}
+
+.footer-input::placeholder {
+    font-weight: 500;
 }
 
 .footer-button {
@@ -297,4 +577,44 @@ footer {
 
 .footer-nav li {
     margin-top: 15px;
+}
+
+.social-icons-list {
+    display: flex;
+    /* margin: 20px 10px; */
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons-list li {
+    display: inline-block;
+    font-size: 30px;
+    margin: 0px 10px;
+
+}
+
+.copyright-disclaimer {
+    font-size: 13px;
+}
+
+blockquote {
+    font-size: 23px;
+    /*padding: 30px;*/
+    font-weight: 700;
+    color: #041038;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.qoute-author {
+    color: #21c094;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.qoute-author-company {
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px;
 }

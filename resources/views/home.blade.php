@@ -1,60 +1,91 @@
 @extends('layouts.public')
 @section('content')
 
-    <div style=" width: 100%; background-size: cover; margin: 0px;  background-image: url('{{ URL::to('/') }}/images/mobile-lanhding.jpg')">
-        <nav><img id="main-logo" src="{{ URL::to('/') }}/images/main-logo.png"></nav>
-
-        <div class="container">
+    <div style=" width: 100%; background-size: cover; margin: 0px;  background-image: url('{{ URL::to('/') }}/images/Last-Min-English-landing-page-screens.png')">
+        <div style=" width: 100%; background-size: cover; margin: 0px;">
+            <nav>
+                <img id="main-logo" class="float-left" src="{{ URL::to('/') }}/images/main-logo.png">
+                <div class="nav-wrapper float-right">
+                    <ul class="main-nav">
+                        <li><a>Blog</a></li>
+                        <li><a>Pricing</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Contact</a></li>
+                        <li><button class="action-button-2" id="nav-start-btn">Start Studying</button></li>
+                    </ul>
+                    <div class="mobile-nav">
+                        <i id="menu-icon" class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+            <div class="container d-none d-md-block" style="height: 1000px">
+                <div class="row">
+                    <div class="col-10">
+                        <h1 id="main-title">Get <span id="main-title-ielts">IELTS</span> done.</h1>
+                        <h2 id="main-subtitle">No worry, no pain, no problem.</h2>
+                        <div class="container button-wrapper">
+                            <button class="action-button">Start studying</button>
+                            <button class="action-button-2">Free stuff</button>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div id="" class="container text-center my-5 d-none d-md-block">
+                            <img id="girl-illustration" height="260" src="{{ asset('images/') }}/girl-illustration.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-block d-md-none">
             <h1 id="main-title">Get <span id="main-title-ielts">IELTS</span> done.</h1>
             <h2 id="main-subtitle">No worry, no pain, no problem.</h2>
         </div>
-        <div id="" class="container text-center my-5">
+        <div id="" class="container text-center my-5 d-block d-md-none">
             <img id="girl-illustration" height="260" src="{{ asset('images/') }}/girl-illustration.png">
             <div class="container my-5">
                 <button class="action-button">Start studying</button>
                 <button class="action-button">Free stuff</button>
             </div>
         </div>
-        <div class="container bg-gray py-5">
-            <h3 class="text-center header-dark-blue main-section-header">Overview Header</h3>
-            <p class="paragraph-gray p-4 main-paragraph">A short and informative few sentences or a paragraph about what the International English Language Testing System is and how Last Minute English can solve the visitors problem.</p>
-            <div class="container">
-                <img id="boy-illustration" height="260" src="{{ asset('images/') }}/boy-illustration.png">
-            </div>
-            <div class="container pt-5">
-                <h1 class="header-dark-blue section-header">IELTS Complete Guide</h1>
-                <div class="row">
-                    <div class="col-12">
-                        {{--                    <table class="text-align-left">--}}
-                        {{--                        <tr>--}}
-                        {{--                            <td class="p-3"><div class="green-circle mx-2 text-center text-white"><i class="fas fa-check"></i></div></td>--}}
-                        {{--                            <td><div class="header-dark-blue benefits-list-item mx-2">Starting from $13.99</div></td>--}}
-                        {{--                        </tr>--}}
-                        {{--                        <tr>--}}
-                        {{--                            <td><div class="green-circle mx-2 text-center text-white"><i class="fas fa-check"></i></div></td>--}}
-                        {{--                            <td><div class="header-dark-blue benefits-list-item mx-2">Step-by-step study journey</div></td>--}}
-                        {{--                        </tr>--}}
-                        {{--                    </table>--}}
 
-                        <div class="d-flex align-item-center   benefits-list-item-wrapper">
-                            <div class="green-circle mx-2 text-center text-white"><i class="fas fa-check check-sign"></i></div> <div class="header-dark-blue benefits-list-item mx-2">Step-by-step study journey</div>
-                        </div>
-                        <div class="d-flex align-item-center   benefits-list-item-wrapper">
-                            <div class="green-circle mx-2 text-center text-white"><i class="fas fa-check check-sign"></i></div> <div class="header-dark-blue benefits-list-item mx-2">Starting from $13.99</div>
-                        </div>
-                        <div class="d-flex align-item-center   benefits-list-item-wrapper">
-                            <div class="green-circle mx-2 text-center text-white"><i class="fas fa-check check-sign"></i></div> <div class="header-dark-blue benefits-list-item mx-2">No risk - 30 days guarantee</div>
-                        </div>
-                        <div class="d-flex align-item-center  benefits-list-item-wrapper">
-                            <div class="green-circle mx-2 text-center text-white"><i class="fas fa-check check-sign"></i></div> <div class="header-dark-blue benefits-list-item mx-2">Everything you need for IELTS</div>
+        <div class="container-fluid bg-gray py-5">
+
+            <div class="container ">
+                <h3 class="text-center header-dark-blue main-section-header">Overview Header</h3>
+                <div class="row">
+                    <div class="col-12 col-lg-8 offset-lg-2">
+                        <p class="paragraph-gray p-4 main-paragraph">A short and informative few sentences or a paragraph about what the International English Language Testing System is and how Last Minute English can solve the visitors problem.</p>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <img id="boy-illustration" src="{{ asset('images/') }}/boy-illustration.png">
+                    </div>
+                    <div class="class=col-12 col-md-6 pt-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="header-dark-blue section-header">IELTS Complete Guide</h1>
+
+                                <div class="d-flex align-item-center   benefits-list-item-wrapper">
+                                    <div class="green-circle-2 mx-2 text-center text-white"><i class="fas fa-check check-sign"></i></div> <div class="header-dark-blue benefits-list-item mx-2">Step-by-step study journey</div>
+                                </div>
+                                <div class="d-flex align-item-center   benefits-list-item-wrapper">
+                                    <div class="green-circle-2 mx-2 text-center text-white"><i class="fas fa-check check-sign"></i></div> <div class="header-dark-blue benefits-list-item mx-2">Starting from $13.99</div>
+                                </div>
+                                <div class="d-flex align-item-center   benefits-list-item-wrapper">
+                                    <div class="green-circle-2 mx-2 text-center text-white"><i class="fas fa-check check-sign"></i></div> <div class="header-dark-blue benefits-list-item mx-2">No risk - 30 days guarantee</div>
+                                </div>
+                                <div class="d-flex align-item-center  benefits-list-item-wrapper">
+                                    <div class="green-circle-2 mx-2 text-center text-white"><i class="fas fa-check check-sign"></i></div> <div class="header-dark-blue benefits-list-item mx-2">Everything you need for IELTS</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <h1 id="main-title" style="text-indent:40px;padding-top:20px;">Why Last Minute <span style="padding-top:20px; padding:10px;" id="main-title-ielts">English</span>?</h1>
+        <div class="container p-5 mt-5">
+            <div class="">
+                <h1 class="p-5 text-center" id="main-title" style="">Why Last Minute <span style="" id="main-title-ielts"> English</span>?</h1>
             </div>
         </div>
 
@@ -185,15 +216,27 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid bg-dark-bflue" style="height:520px; border: 1px solid green;">
+        <div class="container-fluid" style="height:520px;">
 
+            <div class="row">
+                <div class="col-4 offset-4 col-md-4" style="background: #0cc291; height: 3px; margin-top: 100px; margin-bottom: 35px"></div>
+            </div>
+
+            <blockquote class="p-4">
+                "Big bold testimonials from a happy customer, can be used to share or repeat  a nice detail about Last Minute English"
+            </blockquote>
+            <div class="qoute-author">Tommy Brabham</div>
+            <div class="qoute-author-company">Designer of Websites, Warpaint Agency</div>
+            <div>
+                <h3></h3>
+            </div>
         </div>
-        <div class="container-fluid bg-dark-blue" style="border: 1px solid orange;">
+        <div class="container-fluid bg-dark-blue" style="bordedr: 1px solid orange;">
             <div class="container">
                 <h1 class="text-center text-white pricing-header">Pricing</h1>
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <div class="pricing-card" style="border: 1px solid red;">
+                        <div class="pricing-card" style="bordder: 1px solid red;">
                             <div class="pricing-card-top pricing-card-top-gray"></div>
                             <div class="package-name-wrap">
                                 <h3 class="package-name-header">IELTS Basic Package</h3>
@@ -245,7 +288,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
-                        <div class="pricing-card" style="border: 1px solid red;">
+                        <div class="pricing-card" style="borrder: 1px solid red;">
                             <div class="pricing-card-top pricing-card-top-light-green"></div>
                             <div class="package-name-wrap">
                                 <h3 class="package-name-header">IELTS Basic Package</h3>
@@ -297,7 +340,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
-                        <div class="pricing-card" style="border: 1px solid red;">
+                        <div class="pricing-card" style="bordder: 1px solid red;">
                             <div class="pricing-card-top pricing-card-top-green"></div>
                             <div class="package-name-wrap">
                                 <h3 class="package-name-header">IELTS Basic Package</h3>
@@ -348,15 +391,13 @@
                             </div>
                         </div>
                     </div>
-
-
-                 </div>
+                </div>
             </div>
         </div>
-        <footer class="container-fluid" style="margin-top: 40px; border: 1px solid red; margin-top: 40px;">
+        <footer class="container-fluid" style="borrder: 1px solid red; margin-top: 40px;">
             <div class="container">
                 <div class="row" >
-                    <div class="col-12 col-md-4" style="border: 1px solid green;">
+                    <div class="col-12 col-lg-4" style="borrder: 1px solid green;">
                         <div class="footer-clock-wrapper">
                             Clock
                         </div>
@@ -369,30 +410,44 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-5 p-3">
+                    <div class="col-12 col-lg-5 p-3">
                         <div class="d-flex">
                             <input type="text" placeholder="Enter email address" class="footer-input">
                             <div class="footer-button">Get the Free Booklet</div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-3" style="border: 1px solid blue;">
-                        <ul class="text-white footer-nav">
-                            <li><a>Start Studying</a></li>
-                            <li><a>About</a></li>
-                            <li><a>Blog</a></li>
-                            <li><a>Contact</a></li>
-                            <li><a>Terms</a></li>
-                            <li><a>Privacy</a></li>
-                        </ul>
+                    <div class="col-12 col-lg-3" style="borrder: 1px solid blue;">
+                        <div class="social-icons-wrapper">
+                            <ul class="text-white social-icons-list">
+                                <li><a><i class="fab fa-instagram "></i></a></li>
+                                <li><a><i class="fab fa-facebook-square text-white"></i></a></li>
+                                <li><a><i class="fab fa-linkedin text-white"></i></a></li>
+                                <li><a><i class="fab fa-youtube text-white"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav-wrapper">
+                            <ul class="text-white footer-nav">
+                                <li><a>Start Studying</a></li>
+                                <li><a>About</a></li>
+                                <li><a>Blog</a></li>
+                                <li><a>Contact</a></li>
+                                <li><a>Terms</a></li>
+                                <li><a>Privacy</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <hr style="background:green; margin: 75px 10px; height: 2px">
-
+                <div class="row">
+                    <div class="col-2 offset-5 col-md-4 offset-md-4 my-2" style="background: #0cc291; height: 2px"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center text-white copyright-disclaimer p-3">Copyrights &reg; @php date('Y') @endphp Last Minute English</div>
+                </div>
             </div>
-
         </footer>
     </div>
-
+    <script src="{{ asset('js/') }}/app.js"></script>
 @endsection
+
 
 
