@@ -2178,6 +2178,15 @@ document.getElementById('mobile-nav').addEventListener('resize', function (e) {
 
   ;
 });
+var popoutLayer = document.getElementById('overlay');
+var popout = document.getElementById('popout');
+var closePopout = document.getElementById('close-popout');
+closePopout.addEventListener('click', function (e) {
+  popoutLayer.style.display = 'none';
+});
+document.getElementById('nav-start-btn').addEventListener('click', function (e) {
+  popoutLayer.style.display = 'flex';
+});
 
 /***/ }),
 

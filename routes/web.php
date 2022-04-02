@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +19,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+   $link = DB::table('settings')
+        ->where('slug', '=', 'udemy_link')->first();
+
+    return view('home', ['udemyLink' => $link]);
 });
 
 Route::get('/admin', function () {
@@ -25,4 +34,61 @@ Route::get('/admin', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+
+Route::get('/starter', function () {
+    return view('starter');
+});
+
+
+// admin
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/posts', [PostsController::class, 'index']);
+
+Route::get('/posts/create', [PostsController::class, 'create']);
+
+Route::post('/posts', [PostsController::class, 'store']);
+
+Route::get('/posts/{posts}/edit', [PostsController::class, 'edit']);
+
+Route::post('/posts/{posts}/update', [PostsController::class, 'update']);
+
+Route::get('/posts/create', [PostsController::class, 'create']);
+
+Route::get('/settings', [PagesController::class, 'settings']);
+
+Route::post('/settings/save', [PagesController::class, 'settingsSave']);
+
+Route::post('/about', [PagesController::class, 'about']);
+
+
+
+// auth
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/logout', [AuthController::class, 'logout']);
+
+Route::get('/user/create', function () {
+    $user = new \App\Models\User();
+    $user->password = Hash::make('password');
+    $user->email = 'example@gmail.com';
+    $user->name = 'admin';
+    $user->save();
+
+    echo 'success';
+});
+
+
+
 

@@ -1,15 +1,15 @@
 @extends('layouts.public')
 @section('content')
 
-    <div style=" width: 100%; background-size: cover; margin: 0px;  background-image: url('{{ URL::to('/') }}/images/Last-Min-English-landing-page-screens.png')">
+    <div style=" width: 100%; background-size: cover; margin: 0px;  background-image: url('{{ URL::to('/') }}/iimages/Last-Min-English-landing-page-screens.png')">
         <div style=" width: 100%; background-size: cover; margin: 0px;">
             <nav>
                 <img id="main-logo" class="float-left" src="{{ URL::to('/') }}/images/main-logo.png">
                 <div class="nav-wrapper float-right">
                     <ul class="main-nav">
-                        <li><a>Blog</a></li>
-                        <li><a>Pricing</a></li>
-                        <li><a>About</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="#pricing" style="scroll-behavior: smooth;">Pricing</a></li>
+                        <li><a href="/about">About</a></li>
                         <li><a>Contact</a></li>
                         <li><button class="action-button-2" id="nav-start-btn">Start Studying</button></li>
                     </ul>
@@ -234,7 +234,7 @@
         <div class="container-fluid bg-dark-blue" style="bordedr: 1px solid orange;">
             <div class="container">
                 <h1 class="text-center text-white pricing-header">Pricing</h1>
-                <div class="row">
+                <div class="row" id="pricing">
                     <div class="col-12 col-md-4">
                         <div class="pricing-card" style="bordder: 1px solid red;">
                             <div class="pricing-card-top pricing-card-top-gray"></div>
@@ -335,7 +335,7 @@
                                 </div>
                             </div>
                             <div class="text-center" style="padding-top: 30px;">
-                                <button class="action-button-2">Start now</button>
+                                <a target="_blank" href="{{ $udemyLink->value }}"><button class="action-button-2">Start now</button></a>
                             </div>
                         </div>
                     </div>
@@ -394,7 +394,7 @@
                 </div>
             </div>
         </div>
-        <footer class="container-fluid" style="borrder: 1px solid red; margin-top: 40px;">
+        <footer class="container-fluid pt-5" style="borrder: 1px solid red;">
             <div class="container">
                 <div class="row" >
                     <div class="col-12 col-lg-4" style="borrder: 1px solid green;">

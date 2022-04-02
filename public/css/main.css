@@ -2,7 +2,7 @@
 nav {
     /*background: red;*/
     height: 100px;
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
 }
 
 .mobile-nav {
@@ -90,7 +90,7 @@ nav {
 #main-title-ielts {
     font-size: 90px;
     font-weight: 800;
-    padding-top: 78px;
+    /*padding-top: 78px;*/
     text-align: left;
     color: #0cc191;
     letter-spacing: -4px;
@@ -161,7 +161,39 @@ nav {
     margin-left: -250px;
 }
 
+.about-section-header {
 
+}
+
+.main-article-header {
+
+    padding-left: 70px;
+    right: 70px;
+    color: #08143a;
+    padding-top: 30px;
+    font-size: 32px;
+}
+
+.main-article-subtitle {
+    padding: 35px 70px;
+    color: #939ab1;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.main-article-text-wrapper {
+    background-color: #f8f9fb;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.article-text-wrapper {
+    background-color: #f8f9fb;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
 
 @media only screen and (max-width: 1024px) {
 
@@ -232,7 +264,7 @@ nav {
     #main-title-ielts {
         font-size: 44px;
         font-weight: 800;
-        padding-top: 78px;
+        /*padding-top: 78px;*/
         text-align: center;
         color: #0cc191;
 

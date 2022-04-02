@@ -18,3 +18,20 @@ document.getElementById('mobile-nav').addEventListener('resize',  (e) => {
     };
 })
 
+
+
+let popoutLayer = document.getElementById('overlay');
+
+
+let popout = document.getElementById('popout');
+
+let closePopout = document.getElementById('close-popout');
+
+closePopout.addEventListener('click', (e) => {
+    popoutLayer.style.display = 'none';
+})
+
+document.getElementById('nav-start-btn').addEventListener('click',  (e) => {
+    popoutLayer.style.display = 'flex';
+})
+
