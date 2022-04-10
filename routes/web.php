@@ -67,12 +67,17 @@ Route::post('/posts/{posts}/update', [PostsController::class, 'update']);
 
 Route::get('/posts/create', [PostsController::class, 'create']);
 
+Route::get('/post', [PostsController::class, 'show']);
+
 Route::get('/settings', [PagesController::class, 'settings']);
 
 Route::post('/settings/save', [PagesController::class, 'settingsSave']);
 
 Route::post('/about', [PagesController::class, 'about']);
 
+Route::get('/contact', [PagesController::class, 'contact']);
+
+Route::post('/subscribe', [\App\Http\Controllers\SubscriptionController::class, 'store']);
 
 
 // auth
@@ -92,3 +97,7 @@ Route::get('/user/create', function () {
 
 
 
+
+Route::get('/footer', function() {
+    return view('footer');
+});

@@ -1,23 +1,8 @@
 @extends('layouts.public')
 @section('content')
-
     <div style=" width: 100%; background-size: cover; margin: 0px;  background-image: url('{{ URL::to('/') }}/iimages/Last-Min-English-landing-page-screens.png')">
         <div style=" width: 100%; background-size: cover; margin: 0px;">
-            <nav>
-                <img id="main-logo" class="float-left" src="{{ URL::to('/') }}/images/main-logo.png">
-                <div class="nav-wrapper float-right">
-                    <ul class="main-nav">
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="#pricing" style="scroll-behavior: smooth;">Pricing</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a>Contact</a></li>
-                        <li><button class="action-button-2" id="nav-start-btn">Start Studying</button></li>
-                    </ul>
-                    <div class="mobile-nav">
-                        <i id="menu-icon" class="fas fa-bars"></i>
-                    </div>
-                </div>
-            </nav>
+            @include('includes.nav')
             <div class="container d-none d-md-block" style="height: 1000px">
                 <div class="row">
                     <div class="col-10">
@@ -88,7 +73,6 @@
                 <h1 class="p-5 text-center" id="main-title" style="">Why Last Minute <span style="" id="main-title-ielts"> English</span>?</h1>
             </div>
         </div>
-
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4 mt-5">
@@ -105,7 +89,6 @@
                         <h4 class="value-card-subtitle">Study journey for you</h4>
                     </div>
                 </div>
-
                 <div class="col-12 col-md-4 mt-5">
                     <div class="value-card p-3 pt-5">
                         <img src="{{ asset('images/') }}/phone.png">
@@ -119,8 +102,6 @@
                 <button class="action-button">Sing up now</button>
             </div>
         </div>
-
-
         <div class="container">
             <h3 id="big-header" class="text-center header-dark-blue main-section-header">What's included?</h3>
             <div class="row">
@@ -152,7 +133,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-12 col-md-4 d-flex p-2 included-card-wrapper"  >
                     <div class="included-card px-4">
@@ -185,7 +165,6 @@
                 </div>
             </div>
         </div>
-
         <div class="container">
             <h3 id="big-header-2" class="text-center header-dark-blue main-section-header mt-5">Meet Our Students</h3>
             <p class="paragraph-gray px-4 main-paragraph">A short and informative few sentences or a paragraph introducing students with success stories due to Last Minute English.</p>
@@ -217,11 +196,9 @@
             </div>
         </div>
         <div class="container-fluid" style="height:520px;">
-
             <div class="row">
                 <div class="col-4 offset-4 col-md-4" style="background: #0cc291; height: 3px; margin-top: 100px; margin-bottom: 35px"></div>
             </div>
-
             <blockquote class="p-4">
                 "Big bold testimonials from a happy customer, can be used to share or repeat  a nice detail about Last Minute English"
             </blockquote>
@@ -394,57 +371,7 @@
                 </div>
             </div>
         </div>
-        <footer class="container-fluid pt-5" style="borrder: 1px solid red;">
-            <div class="container">
-                <div class="row" >
-                    <div class="col-12 col-lg-4" style="borrder: 1px solid green;">
-                        <div class="footer-clock-wrapper">
-                            Clock
-                        </div>
-                        <div>
-                            <h2 class="text-white footer-header" >
-                                Short Last Minute English objective,
-                                summary or slogan to sign off
-                                and help SEO.
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-5 p-3">
-                        <div class="d-flex">
-                            <input type="text" placeholder="Enter email address" class="footer-input">
-                            <div class="footer-button">Get the Free Booklet</div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-3" style="borrder: 1px solid blue;">
-                        <div class="social-icons-wrapper">
-                            <ul class="text-white social-icons-list">
-                                <li><a><i class="fab fa-instagram "></i></a></li>
-                                <li><a><i class="fab fa-facebook-square text-white"></i></a></li>
-                                <li><a><i class="fab fa-linkedin text-white"></i></a></li>
-                                <li><a><i class="fab fa-youtube text-white"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-nav-wrapper">
-                            <ul class="text-white footer-nav">
-                                <li><a>Start Studying</a></li>
-                                <li><a>About</a></li>
-                                <li><a>Blog</a></li>
-                                <li><a>Contact</a></li>
-                                <li><a>Terms</a></li>
-                                <li><a>Privacy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-2 offset-5 col-md-4 offset-md-4 my-2" style="background: #0cc291; height: 2px"></div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center text-white copyright-disclaimer p-3">Copyrights &reg; @php date('Y') @endphp Last Minute English</div>
-                </div>
-            </div>
-        </footer>
+        @include('includes.footer')
     </div>
     <script src="{{ asset('js/') }}/app.js"></script>
 @endsection

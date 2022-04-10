@@ -65,7 +65,7 @@ class PostsController extends Controller
      */
     public function show(Posts $posts)
     {
-        //
+        return view('post');
     }
 
     /**

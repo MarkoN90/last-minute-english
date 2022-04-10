@@ -2160,9 +2160,14 @@ module.exports = {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 var mobileNav = document.getElementById('mobile-nav');
 document.getElementById('menu-icon').addEventListener('click', function (e) {
@@ -2187,6 +2192,21 @@ closePopout.addEventListener('click', function (e) {
 document.getElementById('nav-start-btn').addEventListener('click', function (e) {
   popoutLayer.style.display = 'flex';
 });
+document.getElementById('popout-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var form = new FormData(document.getElementById('popout-form'));
+  axios__WEBPACK_IMPORTED_MODULE_0___default().post('/subscribe', {
+    first_name: form.get('first_name'),
+    last_name: form.get('last_name'),
+    email: form.get('email')
+  }).then(function (response) {
+    if (response.data.success == true) {
+      e.target.style.display = 'none';
+      document.getElementById('subscription-message').style.display = 'block';
+    }
+  });
+});
+var popoutSubscribeBtn = document.getElementById('popout-subscribe-btn');
 
 /***/ }),
 
@@ -19702,6 +19722,30 @@ process.umask = function() { return 0; };
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	

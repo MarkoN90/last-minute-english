@@ -36,12 +36,15 @@ class PagesController extends Controller
 
     }
 
-
-
     public function about(Request $request)
     {
-
         return view('about');
+    }
+
+
+    public function contact(Request $request)
+    {
+        return view('contact');
 
     }
 
