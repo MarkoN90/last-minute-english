@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\DB;
@@ -65,6 +66,8 @@ Route::get('/posts/{posts}/edit', [PostsController::class, 'edit']);
 
 Route::post('/posts/{posts}/update', [PostsController::class, 'update']);
 
+Route::post('/posts/{posts}/preview', [PostsController::class, 'preview']);
+
 Route::get('/posts/create', [PostsController::class, 'create']);
 
 Route::get('/post', [PostsController::class, 'show']);
@@ -79,6 +82,9 @@ Route::get('/contact', [PagesController::class, 'contact']);
 
 Route::post('/subscribe', [\App\Http\Controllers\SubscriptionController::class, 'store']);
 
+Route::resource('category', CategoryController::class);
+
+Route::get('category/{category}/delete', [CategoryController::class, 'delete']);
 
 // auth
 Route::post('/login', [AuthController::class, 'login']);

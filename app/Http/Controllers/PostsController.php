@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Posts;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -28,7 +29,9 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $categories = Category::all();
+
+        return view('posts.create', ['categories' => $categories]);
     }
 
     /**
@@ -38,6 +41,8 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request->post('category'));
+
 
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -50,6 +55,7 @@ class PostsController extends Controller
         Posts::create([
             'title'          => $request->post('title'),
             'image_name'     => $imageName,
+            'category'       => $request->post('category'),
             'body'           => $request->post('body'),
             'published'      => $request->post('published'),
         ]);
@@ -68,6 +74,18 @@ class PostsController extends Controller
         return view('post');
     }
 
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Posts  $posts
+     * @return \Illuminate\Http\Response
+     */
+    public function preview(Posts $posts)
+    {
+        return view('posts.preview');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -75,7 +93,8 @@ class PostsController extends Controller
       */
     public function edit(Posts $posts)
     {
-        return view('posts.edit', ['post' => $posts]);
+        $categories = Category::all();
+        return view('posts.edit', ['post' => $posts, 'categories' => $categories]);
     }
 
     /**
@@ -85,10 +104,12 @@ class PostsController extends Controller
     public function update(Request $request, Posts $posts)
     {
 
+
+
         $posts->title     = $request->post('title');
         $posts->body      = $request->post('body');
+        $posts->category  = $request->post('category');
         $posts->published = (bool) $request->post('published');
-
 
         if ($request->hasFile('image')) {
 
@@ -97,7 +118,6 @@ class PostsController extends Controller
 
            $posts->image_name =$newImageFileName;
         }
-
 
         $posts->save();
 

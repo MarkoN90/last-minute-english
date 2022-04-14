@@ -86,6 +86,12 @@
 
                 <div class="form-check" style="padding-left: 40px;"><input name="published" class="form-check-input ml-2" id="flexCheckDefault" type="checkbox" value="1"> <label class="form-check-label" for="flexCheckDefault">Published</label></div>
 
+                <select class="form-select" aria-label="Default select example" name="category">
+                    @foreach( $categories as $category)
+                             <option value="{{ $category->name }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
+
                 <div class="mb-3"><label class="form-label" for="exampleTextarea">Post Text</label> <textarea name="body" style="min-height: 400px;" class="form-control needs-validation" id="exampleTextarea" rows="3"> </textarea></div>
 
                 <div class="mb-3 "><label class="form-label" for="exampleTextarea"></label> <button type="submit" class="btn btn-phoenix-primary me-1 mb-1" type="button">Save Post</button></div>

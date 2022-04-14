@@ -88,22 +88,24 @@
                         <tr>
                             <th class="sort" data-sort="name">Title</th>
                             <th class="sort" data-sort="email">Date Created</th>
-                            <th class="sort" data-sort="age">Action</th>
-                            <th class="sort" data-sort="age">Action</th>
+                            <th class="sort" data-sort=" "> </th>
+                            <th class="sort" data-sort=" "> </th>
+                            <th class="sort" data-sort=" "> </th>
+
 
                         </tr>
                         </thead>
                         <tbody class="list">
 
-                            @foreach($posts as $post)
-                                <tr>
-
+                        @foreach($posts as $post)
+                            <tr>
                                 <td class="name">{{ $post->title }}</td>
                                 <td class="email">{{ $post->created_at }}</td>
                                 <td class="age"><a href="/posts/{{ $post->id }}/edit">Edit</a></td>
                                 <td class="age"><a href="/posts/{{ $post->id }}/delete">Delete</a></td>
-                                </tr>
-                            @endforeach
+                                <td class="age"><a href="/posts/{{ $post->id }}/preview">Preview</a></td>
+                            </tr>
+                        @endforeach
 
                         <tr>
                             <td class="name">Homer</td>
@@ -111,7 +113,8 @@
                             <td class="age">35</td>
                             <td class="age">18</td>
 
-                        </tr> </tbody>
+                        </tr>
+                        </tbody>
                     </table>
                 </div>
                 <div class="row align-items-center mt-3">
